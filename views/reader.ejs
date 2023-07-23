@@ -1,0 +1,48 @@
+<!--reader.ejs-->
+
+<!-- Start of the script -->
+<script>
+  // Set the hero text
+  let heroText = "Reader Home Page";
+</script>
+</head>
+<body>
+  <!-- Start of the layout -->
+  <div class="layout-1">
+    <!-- Start of the table container -->
+    <div class="table-container">
+      <!-- Start of the table -->
+      <table>
+        <!-- Table header -->
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Publication Date</th>
+            <th>Likes</th>
+            <th>Author</th>
+          </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody>
+          <!-- Loop through each article and create a table row for each one -->
+          <% articles.forEach((article) => { %>
+            <tr>
+              <!-- Article title -->
+              <td>
+                <!-- Link to the article -->
+                <a href="/reader/article/<%= article.article_id %>">
+                  <%= article.title %>
+                </a>
+              </td>
+              <!-- Article publication date -->
+              <td><%= new Date(article.created_date).toLocaleDateString() %></td>
+              <!-- Article likes count -->
+              <td id="likes_<%= article.article_id %>" data-article-id="<%= article.article_id %>"><%= article.likes_count %></td>
+              <!-- Article author -->
+              <td><%= article.author_name %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,34 @@
+<!--edit.ejs-->
+<!-- Start of the article information section -->
+<div class="article-info">
+    <!-- Display the created date of the article -->
+    <p>Created Date: <%= createdDate %></p>
+    <!-- Display the last modified date of the article -->
+    <p>Last Modified: <%= modifiedDate %></p>
+    <!-- Display the status of the article -->
+    <p>Status: <%= status %></p>
+</div>
+
+<!-- Start of the container for the form -->
+<div class="container">
+    <!-- Display the heading -->
+    <h3>Edit Article</h3>
+
+    <!-- Start of the form to edit the article. On submit, it sends a POST request to the /author/edit/:articleId route -->
+    <form action="/author/edit/<%= articleId %>" method="POST">
+        <!-- Label and input field for the title of the article. The current title is displayed as the default value -->
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" value="<%= blogTitle %>" required><br>
+        <!-- Label and input field for the subtitle of the article. The current subtitle is displayed as the default value -->
+        <label for="subtitle">Subtitle:</label><br>
+        <input type="text" id="subtitle" name="subtitle" value="<%= subtitle %>" required><br>
+        <!-- Label and textarea for the body of the article. The current body text is displayed as the default value -->
+        <label for="body">Body:</label><br>
+        <textarea id="body" name="body" rows="4" cols="50" required><%= bodyText %></textarea>
+        <!-- Hidden input field to send the article ID along with the form data -->
+        <input type="hidden" name="article_id" value="<%= articleId %>">
+        <br>
+        <!-- Submit button for the form -->
+        <input type="submit" value="Update" class="btn btn-primary update-btn">
+    </form>
+</div>

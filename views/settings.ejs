@@ -1,0 +1,29 @@
+<!--settings.ejs-->
+<!-- Start of the settings container -->
+<div class="settings-container">
+    <!-- Display the author name -->
+    <h2 class="author-name">Author: <%= authorName %></h2>
+    <!-- Start of the form -->
+    <form action="/author/settings" method="POST">
+        <!-- Blog title input field -->
+        <div>
+            <label for="blogTitle">Blog Title:</label>
+            <input type="text" id="blogTitle" name="blogTitle" value="<%= blogTitle %>" required>
+        </div>
+        <!-- Blog subtitle input field -->
+        <div>
+            <label for="subtitle">Blog Subtitle:</label>
+            <input type="text" id="subtitle" name="subtitle" value="<%= subtitle %>" required>
+        </div>
+        <!-- Author name input field -->
+        <div>
+            <label for="authorName">Author Name:</label>
+            <input type="text" id="authorName" name="authorName" value="<%= authorName %>" required>
+        </div>
+        <!-- Submit and back buttons -->
+        <div>
+            <input type="submit" value="Submit Changes" class="btn btn-primary update-btn">
+            <button onclick="location.href='/author'" class="btn btn-secondary back-btn">Back</button>
+        </div>
+    </form>
+</div>

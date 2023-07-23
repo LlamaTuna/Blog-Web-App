@@ -1,0 +1,30 @@
+<!--reset.ejs-->
+
+<!-- Flash messages -->
+<% if (error_messages.length > 0) { %>
+  <div class="alert alert-danger"><%= error_messages %></div>
+<% } %>
+
+<% if (success_messages.length > 0) { %>
+  <div class="alert alert-success"><%= success_messages %></div>
+<% } %>
+
+<!-- Start of the container -->
+<div class="container">
+  <!-- Start of the form -->
+  <form action="/reset" method="post">
+    <!-- Username input field -->
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <!-- New password input field -->
+    <label for="newPassword">New Password:</label><br>
+    <input type="password" id="newPassword" name="newPassword"><br>
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+  </form>
+  <!-- Back to login button -->
+  <button class="back-to-login" onclick="window.location.href='/login'">Back to Login</button>
+
+  <!-- Include the login script -->
+  <script src="/login.js"></script>
+</div>

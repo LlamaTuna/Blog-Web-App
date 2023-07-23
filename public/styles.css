@@ -1,0 +1,377 @@
+/*style.css*/
+
+:root {
+  font-size: 16px; /* Base font size */
+  --bs-heading-color: #ffffff; /* Bootstrap heading color */
+}
+
+body {
+  background: radial-gradient(circle, #feffff, #f0fbff); /* Background gradient */
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  border-radius: 4px; /* Rounded corners for input fields */
+}
+
+.navbar .bi {
+  
+  font-size: 2em;  /* Icons on nav-bar */
+}
+
+
+.hero-image {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url('/static/images/hero.jpg'); /* Background image with gradient overlay */
+  height: 50vh; /* Height is 50% of viewport height */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-size: cover; /* Scale the background image to cover the element */
+  position: relative; /* Position relative to its normal position */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-end; /* Align items to the end of the flex container */
+  padding-bottom: 1rem; /* Padding at the bottom */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.hero-image .hero-text h1,
+.hero-image .hero-text h2,
+.hero-image .hero-text h3 {
+  color: #ffffff; /* White text color */
+}
+
+.hero-text h1 {
+  z-index: 1; /* Stack order */
+  font-size: 30rem; /* Font size */
+  margin-bottom: 0.5rem; /* Margin at the bottom */
+}
+
+.hero-text h2 {
+  font-size: 2rem; /* Font size */
+  margin-bottom: 0.5rem; /* Margin at the bottom */
+}
+
+.hero-text h3 {
+  font-size: 1rem; /* Font size */
+}
+
+.form-container {
+  max-width: 1400px; /* Maximum width */
+  margin: 0 auto; /* Center the element horizontally */
+  padding: 20px; /* Padding around the element */
+}
+
+.table-container {
+  margin: 0 auto; /* Center the element horizontally */
+  max-width: 99%; /* Maximum width */
+  border: 1px solid #8f8f8f; /* Border around the element */
+  border-radius: 5px; /* Rounded corners */
+  padding: 20px; /* Padding around the element */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Shadow effect */
+}
+
+.article-body {
+  border: 1px solid #ddd; /* Light border */
+  background-color: #f9f9f9; /* Light background color */
+  padding: 15px; /* Padding inside the border */
+  max-height: 300px; /* Maximum height */
+  overflow-y: auto; /* Make it scrollable */
+  margin-bottom: 20px; /* Space below the paragraph */
+  border-radius: 5px; /* Border radius */
+}
+
+table {
+  width: 100%; /* Full width */
+  border-collapse: collapse; /* Collapse borders into a single border */
+}
+
+th, td {
+  padding: 15px; /* Padding inside the cells */
+  text-align: left; /* Left-aligned text */
+  border-bottom: 1px solid #ddd; /* Border at the bottom of the cells */
+}
+
+.container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 37vh; /* Height is 37% of viewport height */
+}
+
+.container form {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.container form div {
+  margin-bottom: .3rem; /* Margin at the bottom */
+  width: 100%; /* Full width */
+  text-align: center; /* Center-aligned text */
+}
+
+.container form button {
+  display: block; /* Display as block */
+  margin: 0 auto; /* Center the element horizontally */
+}
+
+.settings-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  height: 40vh; /* Height is 40% of viewport height */
+}
+
+.settings-container form {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.settings-container form div {
+  margin-bottom: 1rem; /* Margin at the bottom */
+  width: 100%; /* Full width */
+  text-align: center; /* Center-aligned text */
+}
+
+.settings-container form button {
+  display: block; /* Display as block */
+  margin: 0 auto; /* Center the element horizontally */
+}
+
+.settings-btn {
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  top: 0.625rem; /* Position from the top */
+  right: 0.625rem; /* Position from the right */
+}
+
+.go-back-button {
+  margin-right: 0.313rem; /* Margin on the right */
+}
+
+.back-to-login {
+  margin-right: 0.313rem; /* Margin on the right */
+  margin-top: 5px /* Margin at the top */
+}
+
+.button-container {
+  display: flex; /* Use flexbox for layout */
+}
+
+.new-draft {
+  margin-left: 10px; /* Margin on the left */
+}
+
+.draft-btn,
+.update-btn {
+  display: inline-block; /* Display as inline-block */
+  width: auto; /* Automatic width */
+  padding: 0.313rem 0.625rem; /* Padding around the element */
+  margin: 1.25rem 0.313rem; /* Margin around the element */
+}
+
+.back-btn {
+  margin-left: 0.313rem; /* Margin on the left */
+}
+
+.blog-title,
+.subtitle,
+.author-name {
+  text-align: center; /* Center-aligned text */
+}
+
+.homepage-title {
+  margin-top: 3.75rem; /* Margin at the top */
+  font-size: 0.875rem; /* Font size */
+}
+
+.article-info {
+  background-color: lightgray; /* Light gray background color */
+  padding: 0.938rem; /* Padding around the element */
+  margin-bottom: 0.938rem; /* Margin at the bottom */
+  display: inline-block; /* Display as inline-block */
+  border-radius: 5px; /* Rounded corners */
+}
+
+ul {
+  list-style-type: none; /* No bullet points */
+}
+
+.button:hover {
+  background-color: #202020; /* Dark gray background color on hover */
+  color: white; /* White text color on hover */
+}
+
+.layout-1 > ul > li > .created-date {
+  color: rgb(58, 58, 58); /* Dark gray text color */
+  font-size: 0.438rem; /* Font size */
+  padding-right: 0; /* No padding on the right */
+  padding: 0; /* No padding */
+  margin-top: -0.625rem; /* Negative margin at the top */
+  margin-bottom: 0.625rem; /* Margin at the bottom */
+  text-align: right; /* Right-aligned text */
+}
+
+.layout-1 > ul > li > .author-name {
+  color: rgb(58, 58, 58); /* Dark gray text color */
+  font-size: 0.438rem; /* Font size */
+  padding-left: 0; /* No padding on the left */
+  padding: 0; /* No padding */
+  margin-top: -0.625rem; /* Negative margin at the top */
+  margin-bottom: 0.625rem; /* Margin at the bottom */
+  text-align: left; /* Left-aligned text */
+}
+
+.comment-box {
+  border: 0.063rem solid #bebebe; /* Light gray border */
+  padding: 0.625rem; /* Padding inside the border */
+  margin-bottom: 0.625rem; /* Margin at the bottom */
+  border-radius: 5px; /* Border radius */
+}
+
+
+@media screen and (max-width:37.5rem){
+  .layout-1 > ul > li > figure > figcaption > h3 {
+      color: white; /* White text color */
+      padding: .75rem; /* Padding around the element */
+      font-size: 1.5rem; /* Font size */
+  }
+}
+
+.navbar-nav li.nav-item.ml-auto {
+  margin-left: auto; /* Margin on the left */
+}
+
+.navbar-nav li.nav-item:not(:last-child) {
+  margin-right: 10px; /* Margin on the right */
+}
+
+
+/*///////////////// Dark Theme ////////////////*/
+
+body.dark-theme {
+  background-color: #343a40; /* Dark gray background color */
+  background-image: none; /* No background image */
+  color: #d4d4d4; /* Light gray text color */
+}
+
+body.dark-theme h1, 
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme p {
+  color: #d4d4d4; /* Light gray text color */
+}
+
+body.dark-theme .article-body {
+  border: 1px solid #6c757d; /* Dark gray border */
+  padding: 15px; /* Padding inside the border */
+  max-height: 300px; /* Maximum height */
+  overflow-y: auto; /* Make it scrollable */
+  margin-bottom: 20px; /* Space below the paragraph */
+  background-color: #495057; /* Dark gray background color */
+  color: #d4d4d4; /* Light gray text color */
+}
+
+body.dark-theme .btn-primary {
+  background-color: #6c757d; /* Dark gray background color */
+  color: #2a2c2e; /* Dark gray text color */
+  border: none; /* No border */
+}
+
+body.dark-theme .btn-primary:hover {
+  background-color: #5a6268; /* Darker gray background color on hover */
+  color: #d4d4d4; /* Light gray text color on hover */
+}
+
+body.dark-theme .comment-box {
+  border: 0.125rem solid #6c757d; /* Dark gray border */
+  background-color: #495057; /* Dark gray background color */
+  color: #d4d4d4; /* Light gray text color */
+}
+
+body.dark-theme .form-group label,
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+  color: #d4d4d4; /* Light gray text color */
+  background-color: #495057; /* Dark gray background color */
+  border: 0.063rem solid #6c757d; /* Dark gray border */
+}
+
+body.dark-theme .article-info {
+  background-color: #495057; /* Dark gray background color */
+  color: #d4d4d4; /* Light gray text color */
+}
+
+body.dark-theme input[type="text"],
+body.dark-theme input[type="password"],
+body.dark-theme textarea {
+  background-color: #6c757d; /* Dark gray background color */
+  color: #1b1b1b; /* Dark gray text color */
+  border: 0.063rem solid #6c757d; /* Dark gray border */
+}
+
+body.dark-theme .form-group input::placeholder,
+body.dark-theme .form-group textarea::placeholder {
+  color: #adb5bd; /* Light gray text color */
+}
+
+body.dark-theme .layout-1 > ul > li > p {
+  color: #adb5bd; /* Light gray text color */
+}
+
+body.dark-theme table {
+  color: #d4d4d4; /* Light gray text color */
+}
+
+body.dark-theme th,
+body.dark-theme td {
+  border-bottom-color: #6c757d; /* Dark gray border at the bottom */
+}
+
+body.dark-theme th {
+  background-color: #343a40; /* Dark gray background color */
+}
+
+body.dark-theme tr:nth-child(even) {
+  background-color: #495057; /* Dark gray background color for even rows */
+}
+
+body.dark-theme tr:hover {
+  background-color: #41464d; /* Darker gray background color on hover */
+}
+
+body.dark-theme a {
+  color: #007bff; /* Blue text color */
+}
+
+body.dark-theme a:hover {
+  text-decoration: underline; /* Underline text on hover */
+}
+
+body.light-theme h3.table-heading {
+  color: black; /* Black text color */
+}
+
+body.dark-theme h3.table-heading {
+  color: whitesmoke; /* White text color */
+}
+
+.table-heading {
+  color: black !important; /* Black text color */
+}
+
+body.dark-theme .table-heading {
+  color: whitesmoke !important; /* White text color */
+}
+
+body.dark-theme .new-draft {
+  color: #d4d4d4; /* Light gray text color */
+  background-color: #343a40; /* Dark gray background color */
+}
+

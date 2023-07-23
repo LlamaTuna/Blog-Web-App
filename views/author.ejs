@@ -1,0 +1,90 @@
+<!-- Settings button. On click, it calls the handleButtonClick function with the button as the argument -->
+<button data-href='/author/settings' onclick="handleButtonClick(this)" class="btn btn-secondary settings-btn">Settings</button>
+
+<!-- Start of the table container for draft articles -->
+<div class="table-container">
+    <!-- Display the table heading -->
+    <h3 class="table-heading">Draft Articles</h3>
+    
+    <!-- Start of the table for draft articles -->
+    <table class="layout-1 ">
+        <!-- Table headers -->
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Author</th>
+                <th>Created Date</th>
+                <th>Modified Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody>
+            <!-- Loop through each article. If the article status is 'draft', display it -->
+            <% articles.forEach((article) => { if(article.status === 'draft'){ %>
+                <tr>
+                    <td><%= article.title %></td>
+                    <td><%= article.subtitle %></td>
+                    <td><%= article.author_name %></td>
+                    <td><%= article.created_date %></td>
+                    <td><%= article.modified_date %></td>
+                    <td>
+                        <!-- Edit, Publish, and Delete buttons for the article. On click, they call their respective functions with the button as the argument -->
+                        <button data-href='/author/edit/<%= article.article_id %>' onclick="handleButtonClick(this)" class="btn btn-primary">Edit</button>
+                        <button data-article-id="<%= article.article_id %>" data-article-title="<%= article.title %>" onclick="handlePublishButtonClick(this)" class="btn btn-success">Publish</button>
+                        <button data-article-id="<%= article.article_id %>" data-article-title="<%= article.title %>" onclick="handleDeleteButtonClick(this)" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            <% }}); %>
+        </tbody>
+    </table>
+    <!-- Create New Draft button. On click, it calls the handleButtonClick function with the button as the argument -->
+    <button data-href='/author/newdraft' onclick="handleButtonClick(this)" class="btn btn-primary draft-btn">Create New Draft</button>
+</div>
+
+<!-- Start of the table container for published articles -->
+<div class="table-container">
+    <!-- Display the table heading -->
+    <h3 class="table-heading">Published Articles</h3>
+    
+    <!-- Start of the table for published articles -->
+    <table class="layout-1 ">
+        <!-- Table headers -->
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Author</th>
+                <th>Created Date</th>
+                <th>Modified Date</th>
+                <th>Likes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <!-- Table body -->
+        <tbody>
+            <!-- Loop through each article. If the article status is 'published', display it -->
+            <% articles.forEach((article) => { if(article.status === 'published'){ %>
+                <tr>
+                    <td><%= article.title %></td>
+                    <td><%= article.subtitle %></td>
+                    <td><%= article.author_name %></td>
+                    <td><%= article.created_date %></td>
+                    <td><%= article.modified_date %></td>
+                    <!-- Display the number of likes for the article -->
+                    <td id="likes_<%= article.article_id %>" data-article-id="<%= article.article_id %>"><%= article.likes_count %></td>
+                    <td>
+                        <!-- Share, Edit, and Delete buttons for the article. On click, they call their respective functions with the button as the argument -->
+                        <button data-article-id="<%= article.article_id %>" onclick="handleShareButtonClick(this)" class="btn btn-info">Share</button>
+                        <button onclick="location.href='/author/edit/' + '<%= article.article_id %>'" class="btn btn-primary">Edit</button>
+                        <button data-article-id="<%= article.article_id %>" data-article-title="<%= article.title %>" onclick="handleDeleteButtonClick(this)" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            <% }}); %>
+        </tbody>
+    </table>
+</div>
+
+<!-- Include the author-funcs.js script -->
+<script src="/author-funcs.js"></script>

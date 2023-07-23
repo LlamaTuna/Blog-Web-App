@@ -1,0 +1,32 @@
+<!--register.ejs-->
+
+<!-- Start of the container -->
+<div class="container">
+
+  <!-- Flash messages -->
+  <% if (error_messages && error_messages.length > 0) { %>
+      <div class="alert alert-danger"><%= error_messages %></div>
+  <% } %>
+
+  <% if (success_messages && success_messages.length > 0) { %>
+      <div class="alert alert-success"><%= success_messages %></div>
+  <% } %>
+
+  <!-- Link to reset password -->
+  <p>Forgot your password? <a href="/reset">Reset it here</a></p>
+  
+  <!-- Start of the form -->
+  <form action="/register" method="POST">
+    <!-- Username input field -->
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br>
+    <!-- Password input field -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br>
+    <!-- Submit button -->
+    <input type="submit" value="Register">
+  </form>
+  
+  <!-- Back to login button -->
+  <button class="back-to-login" onclick="window.location.href='/login'">Back to Login</button>
+</div>

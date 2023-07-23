@@ -1,0 +1,34 @@
+<!--login.ejs-->
+
+<!-- Start of the container -->
+<div class="container">
+  <!-- If there are error messages, display them in a Bootstrap alert -->
+  <% if (error_messages.length > 0) { %>
+    <div class="alert alert-danger">
+      <%= error_messages %>
+    </div>
+  <% } %>
+  <!-- Start of the form -->
+  <form method="POST" action="/author/login">
+    <!-- Username input field -->
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <!-- Password input field -->
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+    <!-- Submit button -->
+    <div>
+      <button type="submit">Login</button>
+    </div>
+    <!-- Links to reset password and register -->
+    <p>Having trouble logging in? <a href="/reset">Reset your password</a></p>
+    <p>Don't have an account? Make one here: <a href="/author/register">Create an account</a></p>
+  </form>
+</div>
+
+<!-- Link to the custom JavaScript file -->
+<script src="/login.js"></script>
