@@ -84,6 +84,16 @@ textarea {
   border-radius: 5px; /* Border radius */
 }
 
+/* Custom styles for h3 inside article body */
+.article-h3 {
+  font-size: calc(1.3rem + .6vw); /* Font size based on viewport width */
+  color: #1b1b1b; /* Dark text color */
+  margin-top: 0; /* No margin at the top */
+  margin-bottom: 0.5rem; /* Small margin at the bottom */
+  font-weight: 500; /* Semi-bold font */
+  line-height: 1.2; /* Line height */
+}
+
 table {
   width: 100%; /* Full width */
   border-collapse: collapse; /* Collapse borders into a single border */
@@ -375,3 +385,6 @@ body.dark-theme .new-draft {
   background-color: #343a40; /* Dark gray background color */
 }
 
+body.light-theme h3 {
+  color: #000000; /* Black text color */
+}
