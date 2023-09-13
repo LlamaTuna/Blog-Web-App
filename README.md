@@ -22,7 +22,7 @@ Find node SQLite tutorials at:
 https://www.sqlitetutorial.net/sqlite-nodejs/
 This also a good resource to find examples and tutorials around SQLite queries
 
-This template sets you off in the right direction for your coursework. To get started:
+To get started:
 
 Run ```npm run build-db``` to create the database (database.db)
 Run ```npm run start``` to start serving the web app (Access via http://localhost:3000)
@@ -30,7 +30,7 @@ Run ```npm run start``` to start serving the web app (Access via http://localhos
 You can also run: 
 ```npm run clean-db``` to delete the database before rebuilding it for a fresh start
 
-run ```npm install```, ```npm run build-db```, and ```npm run start``` . We will NOT install additional packages to run your code and will NOT run additional build scripts. Be careful with any additional node dependencies that you use.
+run ```npm install```, ```npm run build-db```, and ```npm run start``` 
 
 #### Student notes: Jeff Becker DNW CM2040  ####
 
